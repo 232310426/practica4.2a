@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi primera gráfica de representación de datos</title>
+  <link rel="stylesheet" href="./css/chartist.min.css">
+  <script src="./js/chartist.min.js"></script>
+  <style>
+    /* Opcional: Añade algo de margen para que se vea mejor */
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h2>Gráfica de datos de la semana</h2>
+  <div class="ct-chart ct-perfect-fourth"></div>
+
+  <script>
+    // Datos para la gráfica
+    var datos = {
+      labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie'],
+      series: [
+        [5, 2, 4, 2, 0]
+      ]
+    };
+
+    // Crear la gráfica de líneas
+    new Chartist.Line('.ct-chart', datos);
+  </script>
+</body>
+</html>
+
